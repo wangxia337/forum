@@ -16,6 +16,12 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development do
+  gem 'rspec-rails', '2.6.1'
+  gem 'annotate', '2.4.0'
+  gem 'faker', '0.3.1'
+end
+
 gem 'jquery-rails'
 
 # Use unicorn as the web server
@@ -30,4 +36,5 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'rspec-rails', '2.6.1'
 end
