@@ -11,6 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110823220300) do
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "encrypted_password"
+    t.string   "salt"
+    t.string   "feature_image_file_name"
+    t.string   "gender",                  :limit => 10
+    t.string   "qq_number",               :limit => 20
+    t.string   "skype"
+    t.string   "question"
+    t.string   "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
