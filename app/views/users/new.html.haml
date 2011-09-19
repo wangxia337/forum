@@ -1,0 +1,30 @@
+%h1= I18n.t("users.signup")
+= form_for @user do |f|
+  %ul.field
+    %li
+      %span= f.label :username, t("user.username")
+      %span= f.text_field :username
+    %li
+      %span= f.label :email, t("user.email")
+      %span= f.text_field :email
+    %li
+      %span= f.label :password, t("user.password")
+      %span= f.text_field :password
+    %li
+      %span= f.label :password_confirmation, t("user.password_confirmation")
+      %span= f.text_field :password_confirmation
+    %li
+      %span= f.label :gender, t("user.gender")
+      %span= f.text_field :gender
+    %li
+      %span= f.label :qq_number, t("user.qq_number")
+      %span= f.text_field :qq_number
+    %li
+      %span= f.label :skype, t("user.skype")
+      %span= f.text_field :skype
+    %li
+      %span= f.label :question, t("user.question")
+      %span= f.text_field :question
+    %li
+      %span= f.label :answer, t("user.answer")
+      %span= f.text_field :answer

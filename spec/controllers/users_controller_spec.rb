@@ -9,4 +9,12 @@ describe UsersController do
       response.should be_success
     end
   end
+  
+  describe "GET new" do
+    it "should get the new page successfully and assign a user" do
+      get :new
+      response.should be_success
+      assigns[:user].should == User.new
+    end
+  end
 end
