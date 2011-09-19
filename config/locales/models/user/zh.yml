@@ -1,0 +1,12 @@
+en:
+  user:
+    username: 用户名
+    email: 邮箱
+    password: 密码
+    password_confirmation: 密码确认
+    gender: 性别
+    qq_number: QQ号码
+    skype: Skype
+    question: 密码找回的验证问题
+    answer: 回答
+    
