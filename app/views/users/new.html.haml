@@ -1,4 +1,4 @@
-%h1= I18n.t("users.signup")
+%h3= t("users.signup")
 = form_for @user do |f|
   %ul.field
     %li
@@ -28,3 +28,4 @@
     %li
       %span= f.label :answer, t("user.answer")
       %span= f.text_field :answer
+.link= link_to t("users.submit"), users_path

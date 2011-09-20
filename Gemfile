@@ -38,4 +38,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec-rails', '2.6.1'
+  gem 'webrat'
 end
