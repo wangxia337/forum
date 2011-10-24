@@ -2,3 +2,4 @@ en:
   users:
     signup: Sign Up
     register: Registration
+    welcome_message: "Register successfully, welcome join us!"
