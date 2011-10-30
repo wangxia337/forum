@@ -3,7 +3,7 @@ Feature: Add a new member
   As a user
   I want to became the member of the forum
   
-  @wip @javascript
+  @javascript
   Scenario: should register as a new member
     When I go to the new user page
     Then I fill in the following in the "user" table:

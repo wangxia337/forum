@@ -9,4 +9,22 @@ zh:
     skype: Skype
     question: 密码找回的验证问题
     answer: 回答
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              blank: 用户名不能为空
+              too_short: 用户名不能小于3个字符
+              too_long: 用户名不能大于50个字符
+            email:
+              blank: 邮箱不能为空
+              taken: 邮箱已经存在
+              invalid: 邮箱格式不正确
+            password:
+              blank: 密码不能为空
+              too_short: 密码的长度不能小于6个字符
+              too_long: 密码的长度不能大于40个字符
+              confirmation: 确认密码与密码不一致
     

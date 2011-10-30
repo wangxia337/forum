@@ -1,4 +1,7 @@
 %h3= t("users.signup")
+- if @user.errors.any?
+  - @user.errors.full_messages.each do |msg|
+    %p= "#{msg}"
 = form_for @user do |f|
   %ul.field
     %li
