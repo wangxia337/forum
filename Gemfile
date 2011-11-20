@@ -27,4 +27,5 @@ group :test do
   gem 'turn', :require => false
   gem 'webrat'
   gem "launchy"
+  gem 'rcov'
 end
