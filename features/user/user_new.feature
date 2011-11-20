@@ -1,12 +1,12 @@
 Feature: Add a new member
   In order to use the forum more better
   As a user
-  I want to became the member of the forum
+  I want to become the member of the forum
   
   @javascript
   Scenario: should register as a new member
     When I go to the new user page
-    Then I fill in the following in the "user" table:
+    Then I fill in or select the following in the "user" table:
       | username              | wangxia                   |
       | email                 | michellewang514@gmail.com |
       | password              | password                  |

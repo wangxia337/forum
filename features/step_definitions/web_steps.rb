@@ -13,12 +13,22 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When /^(?:|I )fill in the following(?: within "([^"]*)")?(?: in the "([^"]*)" table)?:$/ do |selector, table_name, fields|
+When /^(?:|I )fill in or select the following(?: within "([^"]*)")?(?: in the "([^"]*)" table)?:$/ do |selector, table_name, fields|
   perfix = table_name.present? ? "#{table_name}_" : ""
   with_scope(selector) do
     fields.rows_hash.each do |field, value|
-      When %{I fill in "#{perfix}#{field}" with "#{value}"}
+      if ['gender', 'question'].include?(field)
+        When %{I select "#{value}" from "#{perfix}#{field}"}
+      else
+        When %{I fill in "#{perfix}#{field}" with "#{value}"}
+      end
     end
+  end
+end
+
+When /^(?:|I) select "([^"]*)" from "([^"]*)"(?: within "([^"]*)")?$/ do |value, field, selector|
+  with_scope(selector) do
+    select(value, :from => field)
   end
 end
 

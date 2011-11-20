@@ -1,4 +1,14 @@
 en:
   user:
-    password_confirmation: Confirmation 
+    password_confirmation: Confirmation
+    gender:
+      default_gender: Please select your gender
+    question:
+      default_question: Please select your question
+      question_one: When is your birthday?
+      question_two: What is your father's name?
+      question_three: When is your father's birthday?
+      question_four: What is your mother's name?
+      question_five: When is your mother's birthday?
+      question_six: Where is your hometown? 
     

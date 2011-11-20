@@ -5,9 +5,21 @@ zh:
     password: 密码
     password_confirmation: 密码确认
     gender: 性别
+    gender:
+      male: 男
+      female: 女
+      default_gender: 请选择性别
     qq_number: QQ号码
     skype: Skype
     question: 密码找回的验证问题
+    question:
+      default_question: 请选择问题
+      question_one: 你的生日是？
+      question_two: 你爸爸的名字是？
+      question_three: 你爸爸的生日是？
+      question_four: 你妈妈的名字是？
+      question_five: 你妈妈的生日是？
+      question_six: 你的家乡是？
     answer: 回答
   activerecord:
     errors:
