@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source :rubygems
 
 gem 'rails', '3.1.0.rc8'
 gem 'mysql2', '~> 0.3'
@@ -27,5 +27,5 @@ group :test do
   gem 'turn', :require => false
   gem 'webrat'
   gem "launchy"
-  gem 'rcov'
+  gem 'simplecov-rcov'
 end

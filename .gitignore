@@ -5,6 +5,4 @@ tmp/
 .sass-cache/
 .rspec/
 Gemfile.lock
-coverage/*.html
-coverage/*.js
-coverage/*.css
+coverage/

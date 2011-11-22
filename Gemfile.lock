@@ -116,7 +116,6 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2)
-    rcov (0.9.11)
     rdoc (3.11)
       json (~> 1.4)
     rspec (2.6.0)
@@ -143,6 +142,12 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    simplecov (0.5.4)
+      multi_json (~> 1.0.3)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -181,9 +186,9 @@ DEPENDENCIES
   launchy
   mysql2 (~> 0.3)
   rails (= 3.1.0.rc8)
-  rcov
   rspec-rails (= 2.6.1)
   sass-rails (~> 3.1.0.rc)
+  simplecov-rcov
   turn
   uglifier
   webrat
