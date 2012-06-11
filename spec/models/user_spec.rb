@@ -106,6 +106,12 @@ describe User do
     it "should create a new instance given vaild attributes" do
       User.create!(attr).should be_true
     end
+
+    it "should return true when has customize feature image" do
+      new_user = User.create(attr)
+      new_user.feature_image_file_name = "nihao.jpg"
+      new_user.has_feature_image?.should == true
+    end
   end
 end
 

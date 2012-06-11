@@ -1,8 +1,8 @@
-%h3= t("users.signup")
+%h2= t("users.signup")
 - if @user.errors.any?
   - @user.errors.full_messages.each do |msg|
     %p= "#{msg}"
-= form_for @user do |f|
+= form_for @user, :html => {:class => 'new-user-form'} do |f|
   %ul.field
     %li
       %span= f.label :username, t("user.username")
@@ -31,5 +31,7 @@
     %li
       %span= f.label :answer, t("user.answer")
       %span= f.text_field :answer
+    %li
+      %span= f.file_field :feature_image
     %li
       %span= f.submit t("users.submit")

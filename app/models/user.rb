@@ -2,8 +2,8 @@ require 'digest'
 
 class User < ActiveRecord::Base
   
-  attr_accessor :password #vritual field, only in the memory
-  attr_accessible :username, :email, :password, :password_confirmation
+  attr_accessor :password, :username #vritual field, only in the memory
+  attr_accessible :username, :email, :password, :password_confirmation, :feature_image
   before_save :encrypt_password
   
   validates :username, :presence => true,
@@ -17,7 +17,22 @@ class User < ActiveRecord::Base
   validates :password, :confirmation => true,
                        :presence => true,
                        :length => {:within => 6..40}
-                       
+
+  has_attached_file :feature_image,
+                    :url => '/system/feature_images/:assigned_filename',
+                    :path => ':rails_root/public/system/feature_images/:assigned_filename',
+                    :styles => {:original => '150x150'},
+                    :default_url => '/assets/images/default.jpg'
+
+  def has_feature_image?
+    feature_image.url != "/assets/images/default.jpg"
+  end
+  
+  # def username= (value)
+  #   @username = value
+  # end
+
+
   private
   
   def encrypt_password

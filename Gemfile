@@ -6,6 +6,8 @@ gem 'haml', '~> 3.0.22'
 gem 'gravatar_image_tag', '1.0.0'
 gem 'jquery-rails'
 
+gem 'paperclip', '~> 2.3'
+
 group :assets do
   gem 'sass-rails', "~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
